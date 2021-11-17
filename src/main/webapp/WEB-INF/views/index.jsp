@@ -30,7 +30,7 @@
 							<!-- <td rowspan="6" bgcolor="#353535" align="center">
 									<img alt="" src="${pageContext.request.contextPath}/resources/img/kongyu.jpg">
 								</td> -->
-							<td rowspan="6" bgcolor="#353535" align="center">
+							<td height="500" rowspan="6" bgcolor="#353535" align="center">
 									<img alt="" src="<c:url value='/resources/img/kongyu.jpg' />" >
 							</td>
 							
