@@ -1,0 +1,47 @@
+@charset "EUC-KR";
+
+table.t-type01 {
+	text-align: center;
+
+	
+}
+
+table.t-type02 {
+	font-size: 16px;
+	font-family: Arial;
+	color: #ffffff;
+	font-weight: normal;
+	background-color: #000000;	
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+a:link {
+	text-decoration: none;
+	color: #ffffff;	
+}
+
+a:visited {
+	text-decoration: none;
+	color: #ffffff;	
+}
+
+a:hover {
+	text-decoration: none;
+	color: #c0c0c0;	
+}
+
+
+
+
+
+
+
+
+
+
+
+
