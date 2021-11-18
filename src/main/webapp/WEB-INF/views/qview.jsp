@@ -1,4 +1,4 @@
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
+<%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="EUC-KR"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 
@@ -31,27 +31,27 @@
 								<center>
 								<table border="0" cellspacing="0" cellpadding="10">
 									<form action="modify" method="post">
-									<input type="hidden" name="pNum" value="${qview.pNum}">
+									<input type="hidden" name="qNum" value="${qview.qNum}">
 									<tr>
 										<td class="td-type01">ID</td>
 										<!--  <td><input id="input01" type="text" name="qId" value="<% if(session.getAttribute("id") != null) {out.println(session.getAttribute("id"));} else {out.println("Guest");} %>" readonly></td> -->
-										<td class="td-type01"><input id="input01" type="text" name="qId" value="${qview.pId}" readonly></td>
+										<td class="td-type01"><input id="input01" type="text" name="qId" value="${qview.qId}" readonly></td>
 									</tr>
 									<tr>
 										<td class="td-type01">NAME</td>
-										<td><input id="input01" type="text" name="qName" value="${qview.pName}"></td>
+										<td><input id="input01" type="text" name="qName" value="${qview.qName}"></td>
 									</tr>
 									<tr>
 										<td class="td-type01">QUESTION</td>
-										<td><textarea id="input01" name="qContent" rows="5" value="${qview.pContent}"></textarea></td>
+										<td><textarea name="qContent" rows="5">${qview.qContent}</textarea></td>
 									</tr>
 									<tr>
 										<td class="td-type01">E-MAIL</td>
-										<td><input id="input01" type="text" name="qEmail" value="${qview.pEmail}"></td>
+										<td><input id="input01" type="text" name="qEmail" value="${qview.qEmail}"></td>
 									</tr>
 									<tr>
 										<td class="td-type01">DATE</td>
-										<td><input id="input01" type="text" name="qDate" value="${qview.pDate}" readonly></td>
+										<td><input id="input01" type="text" name="qDate" value="${qview.qDate}" readonly></td>
 									</tr>
 																		
 									<tr>
@@ -60,7 +60,7 @@
 										</td> 
 									</tr>
 									<tr>
-										<td colspan="2" align="right" class="td-type01"><a href="delete?pNum=${qview.pNum}"><strike>QUESTION DELETE</strike></a></td>
+										<td colspan="2" align="right" class="td-type01"><a href="delete?pNum=${qview.qNum}"><strike>QUESTION DELETE</strike></a></td>
 									</tr>
 									</form>								
 								</table>
