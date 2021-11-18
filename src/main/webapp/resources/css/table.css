@@ -59,9 +59,9 @@ td.td-type03 {
 	text-align : center;
 	border-style : solid;
 	border-bottom-top: 2px;
-	border-bottom-width: 2px;
-	border-left-width: 4px;
-	border-right-width: 4px;
+	border-bottom-width: 1px;
+	border-left-width: 2px;
+	border-right-width: 1px;
 	
 }
 
@@ -74,9 +74,9 @@ td.td-type04 {
 	width : 450px;
 	border-style : solid;
 	border-bottom-top: 2px;
-	border-bottom-width: 2px;
-	border-left-width: 4px;
-	border-right-width: 4px;
+	border-bottom-width: 1px;
+	border-left-width: 2px;
+	border-right-width: 1px;
 }
 
 
