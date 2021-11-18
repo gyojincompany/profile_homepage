@@ -6,12 +6,12 @@
     
 <mapper namespace="com.javagyojin.profile_home.dao.IDao">
 	
-	<selet id="listDao" resultType="com.javagyojin.profile_home.dto.ContentDto">
+	<select id="listDao" resultType="com.javagyojin.profile_home.dto.ContentDto">
 		SELECT * FROM Q_BOARD ORDER BY QNUM DESC
-	</selet>
+	</select>
 
 	<insert id="writeDao">
-		INSERT INTO Q_BOARD (QNUM, QID, QNAME, QCONTENT, QEMAIL) VALUES (Q_BOARD_SEQ.NEXTVAL, #{param1}, #{param2}, #{param3}, #{param4},)	
+		INSERT INTO Q_BOARD (QNUM, QID, QNAME, QCONTENT, QEMAIL) VALUES (Q_BOARD_SEQ.NEXTVAL, #{param1}, #{param2}, #{param3}, #{param4})	
 	</insert>	
 
 	<select id="qviewDao" resultType="com.javagyojin.profile_home.dto.ContentDto">
