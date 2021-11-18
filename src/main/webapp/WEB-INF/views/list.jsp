@@ -32,20 +32,20 @@
 								<table border="0" cellspacing="0" cellpadding="10">
 									
 									<tr>
-										<td class="td-type01">NO</td>
+										<td class="td-type02">NO</td>
 										<!--  <td class="td-type01"><% if(session.getAttribute("id") != null) {out.println(session.getAttribute("id"));} else {out.println("Guest");} %></td> -->
-										<td class="td-type01">ID</td>
-										<td class="td-type01">NAME</td>
-										<td class="td-type01">QEUSTION</td>
-										<td class="td-type01">DATE</td>											
+										<td class="td-type02">ID</td>
+										<td class="td-type02">NAME</td>
+										<td class="td-type02">QEUSTION</td>
+										<td class="td-type02">DATE</td>											
 									</tr>
 									<c:forEach items="${list}" var="dto"> 
 									<tr>
-										<td class="td-type01">${dto.qNum}</td>
-										<td class="td-type01">${dto.qId}</td>
-										<td class="td-type01">${dto.qName}</td>
-										<td class="td-type01"><a href="qview?qNum=${dto.qNum}"> ${dto.qContent}</a></td>
-										<td class="td-type01">${dto.qDate}</td> 										
+										<td class="td-type03" bgcolor="#b5b5b5">${dto.qNum}</td>
+										<td class="td-type03">${dto.qId}</td>
+										<td class="td-type03">${dto.qName}</td>
+										<td class="td-type04"><a href="qview?qNum=${dto.qNum}"> ${dto.qContent}</a></td>
+										<td class="td-type03">${dto.qDate}</td> 										
 									</tr>
 									</c:forEach>																	
 									<tr>

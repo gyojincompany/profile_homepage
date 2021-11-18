@@ -42,6 +42,45 @@ td.td-type01 {
 	
 }
 
+td.td-type02 {
+	font-size: 20px;	
+	color: #ffffff;
+	font-family: Arial;
+	font-weight: bold;
+	text-align : center;	
+	
+}
+
+td.td-type03 {
+	font-size: 20px;	
+	color: #ffffff;
+	font-family: Arial;
+	font-weight: bold;
+	text-align : center;
+	border-style : solid;
+	border-bottom-top: 2px;
+	border-bottom-width: 2px;
+	border-left-width: 4px;
+	border-right-width: 4px;
+	
+}
+
+td.td-type04 {
+	font-size: 20px;	
+	color: #ffffff;
+	font-family: Arial;
+	font-weight: bold;
+	text-align : left;	
+	width : 450px;
+	border-style : solid;
+	border-bottom-top: 2px;
+	border-bottom-width: 2px;
+	border-left-width: 4px;
+	border-right-width: 4px;
+}
+
+
+
 #input01 {
 	font-size: 20px;
 	color: #c0c0c0;
