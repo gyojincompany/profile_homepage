@@ -1,7 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="EUC-KR"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn" %>
+
 
 <!DOCTYPE html>
 <html>
@@ -40,23 +41,23 @@
 										<td class="td-type02">QEUSTION</td>
 										<td class="td-type02">DATE</td>											
 									</tr>
-									<c:forEach items="${list}" var="dto"> 
+									<c:forEach items="${list}" var="dto">
 									<tr>
 										<td class="td-type03" bgcolor="#b5b5b5">${dto.qNum}</td>
 										<td class="td-type03">${dto.qId}</td>
-										<td class="td-type03">${dto.qName}</td>										
+										<td class="td-type03">${dto.qName}</td>
 										<td class="td-type04"><a href="qview?qNum=${dto.qNum}">
 										<c:choose>
 											<c:when test="${fn:length(dto.qContent)>25}">
-												<c:out value="${fn:substring(dto.qContent,0,24)}" />....										
+												<c:out value="${fn:substring(dto.qContent,0,24)}" />....
 											</c:when>
 											<c:otherwise>
 												<c:out value="${dto.qContent}" />
-											</c:otherwise>
+											</c:otherwise>										
 										</c:choose>
-										</a></td>										
+										</a></td>
 										<td class="td-type03">${dto.qDate}</td> 										
-									</tr>
+									</tr>										
 									</c:forEach>																	
 									<tr>
 										
