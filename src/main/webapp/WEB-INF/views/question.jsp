@@ -41,7 +41,7 @@
 									</tr>
 									<tr>
 										<td class="td-type01">QUESTION</td>
-										<td><textarea id="input01" name="qContent" rows="5"></textarea></td>
+										<td><textarea name="qContent" rows="5"></textarea></td>
 									</tr>
 									<tr>
 										<td class="td-type01">E-MAIL</td>

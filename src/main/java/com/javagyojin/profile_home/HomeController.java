@@ -89,13 +89,19 @@ public class HomeController {
 	}
 	
 	@RequestMapping(value = "/delete")
-	public String delete() {		
+	public String delete(HttpServletRequest request, Model model) {		
+		
+		IDao dao = sqlSession.getMapper(IDao.class);
+		dao.deleteDao(request.getParameter("qNum"));
 		
 		return "redirect:list";
 	}
 	
 	@RequestMapping(value = "/modify")
-	public String modify() {		
+	public String modify(HttpServletRequest request, Model model) {		
+		
+		IDao dao = sqlSession.getMapper(IDao.class);
+		dao.modifyDao(request.getParameter("qName"), request.getParameter("qContent"), request.getParameter("qEmail"), request.getParameter("qNum"));		
 		
 		return "redirect:list";
 	}

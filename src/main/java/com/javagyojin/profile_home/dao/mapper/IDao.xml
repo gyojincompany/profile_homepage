@@ -19,7 +19,7 @@
 	</select>
 	
 	<delete id="deleteDao">
-		DELETE * FROM Q_BOARD WHERE QNUM = #{param1}
+		DELETE FROM Q_BOARD WHERE QNUM = #{param1}
 	</delete>
 	
 	<update id="modifyDao">
