@@ -55,7 +55,7 @@
 											</c:otherwise>
 										</c:choose>
 										</a></td>										
-										<td class="td-type03">${dto.qDate}</td> 										
+										<td class="td-type03"><c:out value="${fn:substring(dto.qDate,0,16)}" /></td> 										
 									</tr>
 									</c:forEach>																	
 									<tr>
