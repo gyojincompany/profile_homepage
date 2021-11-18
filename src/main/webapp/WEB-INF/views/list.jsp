@@ -36,15 +36,21 @@
 										<!--  <td class="td-type01"><% if(session.getAttribute("id") != null) {out.println(session.getAttribute("id"));} else {out.println("Guest");} %></td> -->
 										<td class="td-type01">ID</td>
 										<td class="td-type01">NAME</td>
-										<td class="td-type01">QEUSTION</td>										
-									</tr> 
+										<td class="td-type01">QEUSTION</td>
+										<td class="td-type01">DATE</td>											
+									</tr>
+									<c:forEach items="${list}" var="dto"> 
 									<tr>
-										<td class="td-type01">NAME</td>
-										<td><input id="input01" type="test" name="qName"></td>
-									</tr>																	
+										<td class="td-type01">${dto.qNum}</td>
+										<td class="td-type01">${dto.qId}</td>
+										<td class="td-type01">${dto.qName}</td>
+										<td class="td-type01"><a href="qview?qNum=${dto.qNum}"> ${dto.qContent}</a></td>
+										<td class="td-type01">${dto.qDate}</td> 										
+									</tr>
+									</c:forEach>																	
 									<tr>
-										<td colspan="2"><input id="button01" type="submit" value="입력">&nbsp;&nbsp;&nbsp;&nbsp;
-										<input id="button01" type="button" value="글목록" onclick="javascript:window.location='list'"></td> 
+										
+										<td colspan="5" align="right"><input id="button01" type="button" value="질문하기" onclick="javascript:window.location='question'"></td> 
 									</tr>
 																	
 								</table>

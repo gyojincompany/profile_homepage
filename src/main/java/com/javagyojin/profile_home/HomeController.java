@@ -52,4 +52,16 @@ public class HomeController {
 		return "question";
 	}
 	
+	@RequestMapping(value = "/list")
+	public String list() {		
+		
+		return "list";
+	}
+	
+	@RequestMapping(value = "/qview")
+	public String qview() {		
+		
+		return "qview";
+	}
+	
 }

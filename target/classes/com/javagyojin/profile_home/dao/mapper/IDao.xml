@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+    
+<mapper namespace="com.javagyojin.profile_home.dao.IDao">
+	
+	<selet id="listDao" resultType="com.javagyojin.profile_home.dto.ContentDto">
+		SELECT * FROM Q_BOARD ORDER BY QNUM DESC
+	</selet>
+
+	<insert id="writeDao">
+		INSERT INTO Q_BOARD (QNUM, QID, QNAME, QCONTENT, QEMAIL) VALUES (Q_BOARD_SEQ.NEXTVAL, #{param1}, #{param2}, #{param3}, #{param4},)	
+	</insert>	
+
+	<select id="qviewDao" resultType="com.javagyojin.profile_home.dto.ContentDto">
+		SELECT * FROM Q_BOARD WHERE QNUM = #{param1}
+	</select>
+	
+	<delete id="deleteDao">
+		DELETE * FROM Q_BOARD WHERE QNUM = #{param1}
+	</delete>
+	
+	<update id="modifyDao">
+		UPDATE Q_BOARD SET QNAME = #{param1}, QCONTENT = #{param2}, QEMAIL = #{param3} WHERE QNUM = #{param4}
+	</update>
+
+</mapper>

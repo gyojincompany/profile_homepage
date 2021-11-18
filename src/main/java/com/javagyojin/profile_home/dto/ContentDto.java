@@ -7,13 +7,14 @@ public class ContentDto {
 	private String qName;
 	private String qContent;
 	private String qEmail;
+	private String qDate;
 	
 	public ContentDto() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
 
-	public ContentDto(int qNum, String qId, String qName, String qContent, String qEmail) {
+	public ContentDto(int qNum, String qId, String qName, String qContent, String qEmail, String qDate) {
 		super();
 		this.qNum = qNum;
 		this.qId = qId;
@@ -60,6 +61,14 @@ public class ContentDto {
 
 	public void setqEmail(String qEmail) {
 		this.qEmail = qEmail;
+	}
+
+	public String getqDate() {
+		return qDate;
+	}
+
+	public void setqDate(String qDate) {
+		this.qDate = qDate;
 	}
 	
 	
