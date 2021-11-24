@@ -25,5 +25,21 @@
 	<update id="modifyDao">
 		UPDATE Q_BOARD SET QNAME = #{param1}, QCONTENT = #{param2}, QEMAIL = #{param3} WHERE QNUM = #{param4}
 	</update>
+	
+	<insert id="joinDao">
+		INSERT INTO PMEMBER (MID, MPW, MNAME, MEMAIL) VALUES (#{param1}, #{param2}, #{param3}, #{param4})	
+	</insert>
+	
+	<select id="loginOkDao" resultType="com.javagyojin.profile_home.dto.ContentDto">
+		SELECT * FROM PMEMBER WHERE MID = #{param1}
+	</select>
+	
+	<select id="checkIdDao" resultType="int">
+		SELECT COUNT(*) FROM PMEMBER WHERE MID = #{param1}
+	</select>
+	
+	<select id="checkPwDao" resultType="int">
+		SELECT COUNT(*) FROM PMEMBER WHERE MID = #{param1} AND MPW = #{param2}
+	</select>
 
 </mapper>

@@ -9,6 +9,7 @@
 <title>## LeeGyojin Profile Home</title>
 <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/span.css">
 <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/table.css">
+<script language="JavaScript" src="${pageContext.request.contextPath}/resources/js/members.js"></script>
 </head>
 <body>
 	<%@ include file="include/header.jsp" %>
@@ -30,7 +31,7 @@
 							<td height="500" bgcolor="#D5D5D5">
 								<center>
 								<table border="0" cellspacing="0" cellpadding="10">
-									<form action="joinOk" method="post">
+									<form action="joinOk" method="post" name="reg_frm">
 									<tr>
 										<td class="td-type01">MEMBER ID</td>
 										<td><input id="input01" type="text" name="id"></td>
@@ -52,7 +53,7 @@
 										<td><input id="input01" type="text" name="email"></td>
 									</tr>
 									<tr>
-										<td colspan="2"><input id="button01" type="submit" value="회원가입">&nbsp;&nbsp;&nbsp;&nbsp;
+										<td colspan="2"><input id="button01" type="button" value="회원가입" onclick="infoConfirm()">&nbsp;&nbsp;&nbsp;&nbsp;
 										<input id="button01" type="button" value="로그인" onclick="javascript:window.location='login'"></td> 
 									</tr>
 									</form>								

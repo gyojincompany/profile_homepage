@@ -5,6 +5,7 @@ import java.util.Date;
 import java.util.Locale;
 
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
 
 import org.apache.ibatis.session.SqlSession;
 import org.slf4j.Logger;
@@ -16,6 +17,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
 import com.javagyojin.profile_home.dao.IDao;
+import com.javagyojin.profile_home.dto.ContentDto;
 
 /**
  * Handles requests for the application home page.
@@ -44,7 +46,27 @@ public class HomeController {
 	}
 	
 	@RequestMapping(value = "/loginOk")
-	public String loginOk() {		
+	public String loginOk(HttpServletRequest request, Model model) {		
+		
+		IDao dao = sqlSession.getMapper(IDao.class);
+		
+		ContentDto memberDto = dao.loginOkDao(request.getParameter("id"));
+		
+		int checkId = dao.checkIdDao(request.getParameter("id"));
+		int checkPw = dao.checkPwDao(request.getParameter("id"), request.getParameter("pw"));
+		
+		model.addAttribute("checkId", checkId);
+		model.addAttribute("checkPw", checkPw);
+		
+		HttpSession session = request.getSession();
+		
+		if (checkPw == 1) {
+			session.setAttribute("id", memberDto.getmId());
+			session.setAttribute("name", memberDto.getmName());
+			model.addAttribute("mId", memberDto.getmId());
+			model.addAttribute("mName", memberDto.getmName());
+			
+		}
 		
 		return "loginOk";
 	}
@@ -104,6 +126,27 @@ public class HomeController {
 		dao.modifyDao(request.getParameter("qName"), request.getParameter("qContent"), request.getParameter("qEmail"), request.getParameter("qNum"));		
 		
 		return "redirect:list";
+	}
+	
+	@RequestMapping(value = "/joinOk")
+	public String joinOk(HttpServletRequest request, Model model) {		
+		
+		IDao dao = sqlSession.getMapper(IDao.class);
+		
+		int checkId = dao.checkIdDao(request.getParameter("id"));	
+
+		if (checkId != 1) {
+			dao.joinDao(request.getParameter("id"), request.getParameter("pw"), request.getParameter("name"), request.getParameter("email"));
+			
+			HttpSession session = request.getSession();
+			session.setAttribute("id", request.getParameter("id"));
+			
+			model.addAttribute("mName", request.getParameter("name"));
+		} else {
+			model.addAttribute("checkId", checkId);		
+		}
+		
+		return "joinOk";
 	}
 	
 }

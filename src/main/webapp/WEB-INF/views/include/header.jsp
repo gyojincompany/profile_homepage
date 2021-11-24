@@ -10,15 +10,16 @@
 <body>
 	<table class="t-type02" width="100%" border="0" cellspacing="0" cellpadding="0" >
 		<tr height="50">
-			<td width="74%">&nbsp;</td>
+			<td width="70%">&nbsp;</td>
 			<td width="5%"><a href="${pageContext.request.contextPath}/">home</a></td>
 			<td width="5%"><a href="login">login</a></td>
+			<td width="4%"><a href="join">join</a></td>
 			<td width="5%"><a href="profile">profile</a></td>
 			<td width="6%"><a href="question">question</td>
 			<td width="5%"><a href="contact">contact</a></td>
 		</tr>
 		<tr>
-			<td height="50" colspan="6" bgcolor="#ffffff">&nbsp;</td>
+			<td height="50" colspan="7" bgcolor="#ffffff">&nbsp;</td>
 		</tr>	
 	</table>
 </body>
