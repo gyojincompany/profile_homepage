@@ -24,9 +24,19 @@ a:link {
 	color: #ffffff;	
 }
 
+a.content:link {
+	text-decoration: none;
+	color: #5f5f5f;	
+}
+
 a:visited {
 	text-decoration: none;
 	color: #ffffff;	
+}
+
+a.content:visited {
+	text-decoration: none;
+	color: #5f5f5f;	
 }
 
 a:hover {
@@ -34,9 +44,14 @@ a:hover {
 	color: #c0c0c0;	
 }
 
+a.content:hover {
+	text-decoration: none;
+	color: #ffffff;	
+}
+
 td.td-type01 {
 	font-size: 20px;	
-	color: #ffffff;
+	color: #a6a6a6;
 	font-family: Arial;
 	font-weight: bold;	
 	
@@ -44,77 +59,87 @@ td.td-type01 {
 
 td.td-type02 {
 	font-size: 20px;	
-	color: #ffffff;
-	font-family: Arial;
-	font-weight: bold;
-	text-align : center;	
-	
-}
-
-td.td-type03 {
-	font-size: 20px;	
-	color: #ffffff;
+	color: #a6a6a6;
+	background-color: #e5e5e5;
 	font-family: Arial;
 	font-weight: bold;
 	text-align : center;
 	border-style : solid;
-	border-bottom-top: 2px;
+	border-color : white;
+	border-top-width: 1px;
 	border-bottom-width: 1px;
-	border-left-width: 2px;
+	border-left-width: 1px;
+	border-right-width: 1px;
+}
+
+td.td-type03 {
+	font-size: 20px;	
+	color: #5f5f5f;
+	font-family: Arial;
+	font-weight: bold;
+	text-align : center;
+	border-style : solid;
+	border-color : white;
+	border-top-width: 0;
+	border-bottom-width: 1px;
+	border-left-width: 1px;
 	border-right-width: 1px;
 	
 }
 
 td.td-type04 {
 	font-size: 20px;	
-	color: #ffffff;
+	color: #5f5f5f;
 	font-family: Arial;
 	font-weight: bold;
 	text-align : left;	
 	width : 450px;
 	border-style : solid;
-	border-bottom-top: 2px;
+	border-color : white;
+	border-top-width: 0;
 	border-bottom-width: 1px;
-	border-left-width: 2px;
+	border-left-width: 1px;
 	border-right-width: 1px;
 }
 
 
 
 #input01 {
+	font-family : Arial;
 	font-size: 20px;
-	color: #c0c0c0;
-	border: 1px solid;
+	color: #636363;
+	border: 1px solid #c0c0c0;
 	background-color: #ffffff;
 	width: 220px;
 	padding: 5px;
-	
 }
 
 #button01 {
-	border: 1px solid white;
-	background-color: rgba(0,0,0,0);
+	border: 2px solid white;
+	background-color: #a0a0a0;
 	color: #ffffff;
-	width: 172px;
+	width: 175px;
 	padding: 5px;
+	height: 40px
 }
 
 #button01:hover {
 	
-	background-color: #ffffff;
-	color: #D5D5D5;
+	background-color: #666666;
+	color: #ffffff;
 	
 }
 
 textarea {
 	
+	font-family : Arial;
 	font-size: 20px;
-	color: #c0c0c0;
-	border: 1px solid;
+	color: #636363;
+	border: 1px solid #c0c0c0;
 	background-color: #ffffff;
 	width: 220px;
 	padding: 5px;
-	font-weight: bold;	
+		
 	
 }
 

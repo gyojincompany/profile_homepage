@@ -60,7 +60,7 @@
 										</td> 
 									</tr>
 									<tr>
-										<td colspan="2" align="right" class="td-type01"><a href="delete?qNum=${qview.qNum}"><strike>QUESTION DELETE</strike></a></td>
+										<td colspan="2" align="right" class="td-type01"><a class="content" href="delete?qNum=${qview.qNum}"><strike>QUESTION DELETE</strike></a></td>
 									</tr>
 									</form>								
 								</table>
