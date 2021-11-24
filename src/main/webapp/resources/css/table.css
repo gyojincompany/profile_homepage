@@ -57,6 +57,14 @@ td.td-type01 {
 	
 }
 
+td.memberinfo {
+	font-size: 20px;	
+	color: #5f5f5f;
+	font-family: Arial;
+	font-weight: bold;	
+	
+}
+
 td.td-type02 {
 	font-size: 20px;	
 	color: #a6a6a6;

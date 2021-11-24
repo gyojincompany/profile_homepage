@@ -35,3 +35,10 @@ span.s-text03 {
 	font-size: 20px;
 	color: #c0c0c0;
 }
+
+span.title03 {
+	font-size: 20px;
+	color: #ffffff;
+	font-family: malgun;	
+	font-weight: bold;
+}

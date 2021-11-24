@@ -63,7 +63,12 @@
 									<tr>
 										<td class="td-type01">
 											${mName}님 안녕하세요.<br>	
-											로그인에 성공하셨습니다.
+											로그인에 성공하셨습니다.<br>
+										</td>
+									</tr>
+									<tr>
+										<td class="td-type01" align="center">		
+											<input id="button01" type="button" value="회원정보수정" onclick="javascript:window.location='infoModify'">
 										</td>										
 									</tr>
 									

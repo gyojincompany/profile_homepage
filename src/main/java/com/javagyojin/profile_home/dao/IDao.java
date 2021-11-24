@@ -16,6 +16,7 @@ public interface IDao {
 	public ContentDto loginOkDao(String mId);
 	public int checkIdDao(String mId);
 	public int checkPwDao(String mId, String mPw);
+	public void infoModifyOkDao(String mPw, String mName, String mEmail, String mId);
 	
 
 }

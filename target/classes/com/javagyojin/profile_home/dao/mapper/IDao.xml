@@ -41,5 +41,9 @@
 	<select id="checkPwDao" resultType="int">
 		SELECT COUNT(*) FROM PMEMBER WHERE MID = #{param1} AND MPW = #{param2}
 	</select>
+	
+	<update id="infoModifyOkDao">
+		UPDATE PMEMBER SET MPW = #{param1}, MNAME = #{param2}, MEMAIL = #{param3} WHERE MID = #{param4}
+	</update>
 
 </mapper>

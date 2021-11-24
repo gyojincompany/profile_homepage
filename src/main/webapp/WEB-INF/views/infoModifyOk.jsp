@@ -10,7 +10,7 @@
 <title>## LeeGyojin Profile Home</title>
 <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/span.css">
 <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/table.css">
-<script language="JavaScript" src="${pageContext.request.contextPath}/resources/js/modifyOk.js"></script>
+<script language="JavaScript" src="${pageContext.request.contextPath}/resources/js/members.js"></script>
 </head>
 <body>
 	<%@ include file="include/header.jsp" %>
@@ -31,35 +31,33 @@
 						<tr>							
 							<td height="500" bgcolor="#D5D5D5">
 								<center>
+								
 								<table border="0" cellspacing="0" cellpadding="10">
-									<form action="infoModifyOk" method="post" name="modify_form">
+									<form action="infoModifyOk" method="post" name="reg_frm">
+									<tr><td colspan="2" align="center"><span class="title03">${memberDto.mName}님의 회원정보 수정 완료</span></td>
 									<tr>
 										<td class="td-type01">MEMBER ID</td>
-										<td><input id="input01" type="text" name="id" value="<% out.println(session.getAttribute("id")); %>" readonly></td>
-									</tr>
+										<td class="memberinfo">${memberDto.mId}</td>
+									</tr>									
 									<tr>
 										<td class="td-type01">PASSWORD</td>
-										<td><input id="input01" type="password" name="pw"></td>
-									</tr>
-									<tr>
-										<td class="td-type01">PW CHECK</td>
-										<td><input id="input01" type="password" name="pw_check"></td>
-									</tr>
+										<td class="memberinfo">${memberDto.mPw}</td>
+									</tr>									
 									<tr>
 										<td class="td-type01">NAME</td>
-										<td><input id="input01" type="text" name="name" value="${memberDto.mName }" readolny></td>
+										<td class="memberinfo">${memberDto.mName }</td>
 									</tr>
 									<tr>
 										<td class="td-type01">E-MAIL</td>
-										<td><input id="input01" type="text" name="email" value="${memberDto.mEmail }"></td>
+										<td class="memberinfo">${memberDto.mEmail }</td>
 									</tr>
 									<tr>
 										<td class="td-type01">JOIN DATE</td>
-										<td><input id="input01" type="text" name="date" value="<c:out value="${fn:substring(memberDto.mDate,0,10)}" />" readonly></td>
+										<td class="memberinfo"><c:out value="${fn:substring(memberDto.mDate,0,10)}" /></td>
 									</tr>
 									<tr>
-										<td colspan="2"><input id="button01" type="button" value="정보수정" onclick="updateInfoConfirm()">&nbsp;&nbsp;&nbsp;&nbsp;
-										<input id="button01" type="button" value="취소" onclick="javascript:window.location='infoModifyCancel'"></td> 
+										<td colspan="2"><input id="button01" type="button" value="정보수정" onclick="javascript:window.location='infoModify'">&nbsp;&nbsp;&nbsp;&nbsp;
+										<input id="button01" type="button" value="처음화면" onclick="javascript:window.location='index'"></td> 
 									</tr>
 									</form>								
 								</table>

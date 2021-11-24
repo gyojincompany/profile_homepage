@@ -10,7 +10,7 @@
 <body>
 	<table class="t-type02" width="100%" border="0" cellspacing="0" cellpadding="0" >
 		<tr height="50">
-			<td width="70%">&nbsp;</td>
+			<td width="69%">&nbsp;</td>
 			<td width="5%"><a href="${pageContext.request.contextPath}/">home</a></td>
 			<td width="5%">
 			
@@ -30,10 +30,9 @@
 			%>
 				
 			</td>
-			<td width="4%">
+			<td width="5%">
 			
 			<%	
-			
 				if (sId == null) {
 			%>
 				<a href="join">join</a>
@@ -41,7 +40,8 @@
 			<% 
 				} else {
 			%>	
-				<a href="infoModify">modify</a>			<%
+				<a href="infoModify">modify</a>			
+			<%
 				} 
 			%>
 			

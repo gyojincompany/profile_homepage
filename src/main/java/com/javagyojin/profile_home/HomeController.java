@@ -39,6 +39,12 @@ public class HomeController {
 		return "index";
 	}
 	
+	@RequestMapping(value = "/index")
+	public String indexGo() {		
+		
+		return "index";
+	}
+	
 	@RequestMapping(value = "/login")
 	public String login() {		
 		
@@ -141,6 +147,8 @@ public class HomeController {
 		
 		int checkId = dao.checkIdDao(request.getParameter("id"));	
 
+		model.addAttribute("checkId", checkId);
+		
 		if (checkId != 1) {
 			dao.joinDao(request.getParameter("id"), request.getParameter("pw"), request.getParameter("name"), request.getParameter("email"));
 			
@@ -148,9 +156,7 @@ public class HomeController {
 			session.setAttribute("id", request.getParameter("id"));
 			
 			model.addAttribute("mName", request.getParameter("name"));
-		} else {
-			model.addAttribute("checkId", checkId);		
-		}
+		} 
 		
 		return "joinOk";
 	}
@@ -167,6 +173,47 @@ public class HomeController {
 		model.addAttribute("memberDto", memberDto);			
 		
 		return "infoModify";
+	}
+	
+	@RequestMapping(value = "/infoModifyOk")
+	public String infoModifyOk(HttpServletRequest request, Model model) {		
+				
+		IDao dao = sqlSession.getMapper(IDao.class);
+		
+		dao.infoModifyOkDao(request.getParameter("pw"), request.getParameter("name"), request.getParameter("email"), request.getParameter("id"));
+						
+		ContentDto memberDto = dao.loginOkDao(request.getParameter("id"));
+		
+		model.addAttribute("memberDto", memberDto);			
+		
+		return "infoModifyOk";
+	}
+	
+	@RequestMapping(value = "/infoModifyCancel")
+	public String infoModifyCancel(HttpServletRequest request, Model model) {		
+				
+		HttpSession session = request.getSession();
+		String sid = (String) session.getAttribute("id");
+		
+		IDao dao = sqlSession.getMapper(IDao.class);		
+		ContentDto memberDto = dao.loginOkDao(sid);
+		
+		model.addAttribute("memberDto", memberDto);			
+			
+		
+		return "infoModifyCancel";
+	}
+	
+	@RequestMapping(value = "/profile")
+	public String profile() {		
+		
+		return "profile";
+	}
+	
+	@RequestMapping(value = "/contact")
+	public String contact() {		
+		
+		return "contact";
 	}
 	
 }
