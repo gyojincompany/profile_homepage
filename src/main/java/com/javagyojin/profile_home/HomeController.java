@@ -71,6 +71,12 @@ public class HomeController {
 		return "loginOk";
 	}
 	
+	@RequestMapping(value = "/logout")
+	public String logout() {		
+		
+		return "logout";
+	}
+	
 	@RequestMapping(value = "/join")
 	public String join() {		
 		
@@ -147,6 +153,20 @@ public class HomeController {
 		}
 		
 		return "joinOk";
+	}
+	
+	@RequestMapping(value = "/infoModify")
+	public String infoModify(HttpServletRequest request, Model model) {		
+		
+		HttpSession session = request.getSession();
+		String sid = (String) session.getAttribute("id");
+		
+		IDao dao = sqlSession.getMapper(IDao.class);		
+		ContentDto memberDto = dao.loginOkDao(sid);
+		
+		model.addAttribute("memberDto", memberDto);			
+		
+		return "infoModify";
 	}
 	
 }

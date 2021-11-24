@@ -48,6 +48,13 @@ function infoConfirm() {
 }
 
 function updateInfoConfirm() {
+	
+	if(document.reg_frm.name.value.length == 0) {
+		alert("이름은 필수 사항입니다.");
+		reg_frm.name.focus();
+		return;
+	}	
+
 	if(document.reg_frm.pw.value == "") {
 		alert("패스워드를 입력하세요.");
 		document.reg_frm.pw.focus();

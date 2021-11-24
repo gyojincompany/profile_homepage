@@ -3,7 +3,7 @@ package com.javagyojin.profile_home.dao;
 import java.util.ArrayList;
 
 import com.javagyojin.profile_home.dto.ContentDto;
-import com.javagyojin.profile_home.dto.MemberDto;
+
 
 public interface IDao {
 	
